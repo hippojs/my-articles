@@ -1,0 +1,16 @@
+{
+  "name": "my-articles",
+  "version": "1.0.0",
+  "description": "A collection of current writting / past articles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chinese-conv": "^1.0.1",
+    "html-to-text": "^4.0.0"
+  }
+}
