@@ -10,10 +10,12 @@ A collection of current writting / past articles.
 
 ## How to use it
 
-1. Use kebab-case for file names and directory names. e.g. my-folder, my-awesome-new-article.
+1. Use kebab-case for file names and directory names. e.g. my-folder, my-awesome-new-article. The punchcials has to be English words.
 2. `<>` stand for a variable, use camelcase for variable name. e.g. `<nameOfImage>`
 3. Create a new folder for each new article,
-4. Article name should begin with `[]` to classify it, refer [the table below](#article-name-classify-table)
+4. Article name should begin with 2 `[YY-MM-DD][classify]`
+    - Use this date format to sort article
+    - For classify, refer [the table below](#article-name-classify-table)
 5. Images should under it's subfolder `/images`.
     - Name convention for image: `image-<index>__<nameOfImage>-.<extentionType>`. e.g. `image-1__大本营地图.png`
     - Keep `<index>` as increase by 1 begin from 0 (yep, programmer always count from 0). If need to add new image, instead of renaming all the existing ones after it, put sub version. e.g. `image-1`, `image-2`, `image-3`, `image-4`. When wants to insert new image between `image-3` and `image-4`, name it `image-3.1`.
@@ -30,6 +32,16 @@ A collection of current writting / past articles.
     - USe the following command to extra text _[TODO: write npm script for it]_ `cat example/test.html | node_modules/.bin/html-to-text > test.txt`
 10. Convert to traditional chinese by copy the article into `scripts/chinese-conv.js` _[TODO: fort the lib and create a cli tool for it]_ https://github.com/Pleasurazy/chinese-conv
 
+## Serve image files from github
+
+<!-- TODO -->
+Some website prefer use image url host from other place instead of uploading image to them. To address this, open files in github repro, append `?raw=true` in the file URL.
+
+<!-- TODO -->
+Create all the image files URL in the folder's read me.
+
+## Create snippet / template compiler for new article.
+
 ## Reference
 
 ### Article Name Classify Table
@@ -37,3 +49,4 @@ A collection of current writting / past articles.
 Name | Category
 ------------ | -------------
 cc | clash of clans
+pf | professional

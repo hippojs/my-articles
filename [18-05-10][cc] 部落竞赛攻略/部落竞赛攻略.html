@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>部落竞赛攻略.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="%E5%A6%82%E4%BD%95%E8%BD%BB%E6%9D%BE%E6%89%93%E6%BB%A1%E9%83%A8%E8%90%BD%E7%AB%9E%E8%B5%9B%E7%A7%AF%E5%88%86%EF%BC%88%E5%B0%8F%E7%99%BD%E6%8C%87%E5%8D%97%EF%BC%89">如何轻松打满部落竞赛积分（小白指南）</h1>
+<p>内容简介：用部落竞赛获得的魔法物品来升级建筑、兵种和法术是 CC 最有趣的玩法之一。这篇攻略详细介绍了如何策略性的轻轻松松打满部落竞赛积分，让您在您的部落中脱颖而出。</p>
+<p>楼主介绍：LinkedIn Web 前端工程师，坐标纽约。科技和人文交叉路口的活跃份子。更多信息，请关注新浪微博：@流浪的拉多</p>
+<h2 id="%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E5%9F%BA%E6%9C%AC%E5%AE%9A%E4%B9%89-%E5%8E%9F%E6%96%87">第一部分 基本定义 <a href="https://supercell.helpshift.com/a/clash-of-clans/?p=web&amp;l=zh&amp;s=clan-games&amp;f=what-are-clan-games">原文</a></h2>
+<h3 id="%E9%83%A8%E8%90%BD%E7%AB%9E%E8%B5%9B%E6%98%AF%E4%BB%80%E4%B9%88">部落竞赛是什么</h3>
+<p>部落竞赛是一种限时活动（一般 5 到 6 天），在部落竞赛期间，部落成员通过完成挑战来让整个部落获得尽可能多的奖励。您可以在村庄左侧（竞赛场）查看到游戏内是否即将迎来部落竞赛活动。</p>
+<h3 id="%E5%A6%82%E4%BD%95%E5%8F%82%E5%8A%A0">如何参加</h3>
+<p>系统默认所有大本营等级6级及以上部落成员都参加该活动。当一个部落成员领取了挑战后，他将无法参加另一个部落的部落竞赛。</p>
+<p>当部落竞赛开始后，点击下图标注的地方进入挑战中心。</p>
+<p><img src="images/image-1__大本营地图.png" alt="大本营地图"></p>
+<p>下图为挑战中心展示的不同任务。每个任务会有不同积分奖励。但是请注意，奖励分数和任务难度不一定成正比，这也是这篇攻略想要介绍的技巧。</p>
+<p><img src="images/image-2__部落竞赛任务中心.png" alt="部落竞赛任务中心"></p>
+<h3 id="%E6%8C%91%E6%88%98%E4%B8%AD%E5%BF%83">挑战中心</h3>
+<p>部落成员在挑战中心看到的挑战都是相同的。一个部落成员领取挑战后，该项挑战将从挑战中心消失，其他成员也就看不到这个挑战了。挑战中心的挑战被领取以后，将会刷出新的挑战。</p>
+<p>若您在领取挑战后发现无法完成，您可以选择放弃该挑战，但是之后您需要等待一段冷却时间，才可以领取新的挑战。放弃挑战的冷却时间会随着放弃次数增加而累计，所以在领取挑战和放弃挑战前请谨慎思考后再做出决定哦。</p>
+<h3 id="%E7%A7%AF%E5%88%86%E5%92%8C%E5%A5%96%E5%8A%B1">积分和奖励</h3>
+<p>每个玩家都有个人最高积分数，这代表着个人在活动中可积累的最高积分。每个人的个人积分组成部落的活动总积分。部落积分到达一定数值后，就会到达奖励临界点。 每到达一个奖励临界点，意味着活动结束后每个成员都可以领取更多奖励。例如，如果活动中有4个临界点，您的部落达到了其中3个临界点，在活动结束后每个人可以选择3种奖励。奖励临界点和活动总积分不受部落成员等级或数量的影响。所有部落的奖励临界点数量相同。发展部落的机会就在眼前，快来参加吧！</p>
+<h3 id="%E9%AD%94%E6%B3%95%E7%89%A9%E5%93%81">魔法物品</h3>
+<p>魔法物品具有神秘力量，使用魔法物品可以瞬间获得增益效果。您可以通过参加部落竞赛来赢得魔法物品，您获得的魔法物品将存放在宝库中。魔法物品可以带来增益效果，一旦使用就消耗完毕，不能再次使用。魔法物品可带来的部分增益效果包括：</p>
+<ul>
+<li>立即完成兵种或法术升级</li>
+<li>立即完成建筑升级</li>
+<li>提速资源采集器</li>
+<li>在一段时间内可使用满级军队</li>
+</ul>
+<p>敌人无法掠夺您存放在宝库中的魔法物品。</p>
+<h2 id="%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%8F%82%E5%8A%A0%E9%83%A8%E8%90%BD%E7%AB%9E%E8%B5%9B">第二部分 为什么要参加部落竞赛</h2>
+<p>正如前面提到，竞赛赢取的积分奖励可以解锁奖励中的魔法物品。下面具体分析下这些物品的价值。</p>
+<p>下图是楼主部落某次竞赛奖励。最后两栏的魔法物品分别能将大本营金币和圣水填满。做一个等价代换：如果玩家通过购买宝石来填满金币，按照楼主目前TH7，金币存储量4百万来计算，需要 1500 左右的宝石，而500个宝石的价格是 30 RMB，所以需要 90 RMB。可以看出人民币在游戏里的购买力真的不怎样（其实美元也没有好太多，500 宝石价格 5 美元，而在美国一个麦当劳汉堡套餐大概 8 美元）。当然，这只是一个简单的例子，如果经常观察物品商店出现的促销信息则可以更直观的感受到部落竞赛所赢取的宝物的价值。</p>
+<p><img src="images/image-2.1__部落竞赛奖品.jpg" alt="部落竞赛奖品"></p>
+<p>同时，积极参加竞赛也是为部落做贡献的最好方式。首领们都喜欢竞赛积分高的成员。因为您的积分会让所有成员都有受益。部落战（敲黑板，注意和部落竞赛的区分）每次进攻要保证三星则需要很多实战技巧，并且由于每个对手都只有一次进攻机会（不能进攻相同玩家），玩起来压力会很大。相比之下，部落竞赛则相对来说轻松许多，一次竞赛的时间长度一般为 6 天，可以利用每天一些碎片时间就能取得不错成绩。部落首领们都鼓励这样的团队协作精神。通过打高竞赛积分，是获得优先捐兵，晋升的好途径。</p>
+<p>另外，不能否认部落设定是这款游戏后期最精彩的一项更新，魔法物品目前只能通过购买和竞赛获得，所以可以看出竞赛是部落设定中很重要的一部分。</p>
+<h2 id="%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86-%E5%B0%8F%E7%99%BD%E7%8E%A9%E5%AE%B6%EF%BC%88th9-%E4%BB%A5%E4%B8%8B%EF%BC%89%E5%A6%82%E4%BD%95%E6%89%93%E5%A5%BD%E9%83%A8%E8%90%BD%E7%AB%9E%E8%B5%9B">第三部分 小白玩家（TH9 以下）如何打好部落竞赛</h2>
+<h3 id="%E9%A6%96%E5%85%88%E6%9D%A5%E7%9C%8B%E4%B8%8B%E7%AB%9E%E8%B5%9B%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E4%B8%8D%E5%90%8C%E4%BB%BB%E5%8A%A1%E7%B1%BB%E5%9E%8B">首先来看下竞赛中出现的不同任务类型</h3>
+<p>**园艺大师：**在家乡和夜世界移除 5 个障碍物。</p>
+<p>**增援：**向部落成员增援总计 N 空间的法术/部队。</p>
+<p>**使用特殊兵种型：**在联机/对抗模式中使用 N 个野蛮人，并赢得 N 颗胜利之星。</p>
+<p>**英雄猎手：**在联机模式中击败 XX 英雄等级累计达到 125 级。</p>
+<p><strong>摧毁建筑型：</strong></p>
+<ul>
+<li>在联机模式中摧毁 12 个圣水瓶 / 12 个箭塔 / 4 个实验室。</li>
+<li>在对抗赛中摧毁 10 个双管加农炮 / 5 个撼地巨石 / 6 个时光钟楼。</li>
+</ul>
+<p><strong>对战型：</strong></p>
+<ul>
+<li>在联机模式中进攻大本营高于自己的村庄，并赢得 3 颗胜利之星。</li>
+<li>在部落对战中赢得 3 颗胜利之星。</li>
+<li>在联机/对抗赛中获胜 3 场/赢得 6 颗胜利之星/总计达到 225% 的摧毁率。</li>
+</ul>
+<p>**资源掠夺型：**在联机模式中掠夺 N 万金币/圣水/重油。</p>
+<h3 id="%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%88%86%E6%9E%90%E4%B8%8D%E5%90%8C%E4%BB%BB%E5%8A%A1%E6%9C%89%E5%93%AA%E4%BA%9B%E5%AE%8C%E6%88%90%E6%8A%80%E5%B7%A7">接下来分析不同任务有哪些完成技巧</h3>
+<p>**园艺大师：**最容易完成，相对来说奖励积分也不高，适合小白练手。</p>
+<p>**增援：**领取任务后可以在部落聊天频道里说明是完成竞赛任务，请其他部落成员配合下。不过楼主觉得这类任务性价比并不高。</p>
+<p>**使用特殊兵种型：**建议根据自己部队等级来决定是否选取任务。比如楼主夜世界的打法是弓箭手（ 12 级）+ 英雄，如果任务需要其他任何兵种，那么需要很谨慎的估计能取得胜利之星的概率。因为将一组弓箭手换掉，整体部队输出基本减少了 20%。</p>
+<p>**英雄猎手：**级别太低，没有虐过对方英雄 <img class="emoji" alt="joy" src="data:image/png;base64,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" /></p>
+<p><strong>摧毁建筑型：</strong></p>
+<p>需要分析下具体建筑类型和世界来选择不同策略。</p>
+<p>比如“对抗赛中摧毁 6 个时光钟楼”，这种任务楼主一般会选择攻破钟楼后直接退出。</p>
+<p>这样做的缺点是会“掉杯”，但是，当多玩这个游戏后，发现“掉杯”并不是什么大不了的事情。</p>
+<p>在夜世界，基本每天打胜三场杯段很容易就上去了。</p>
+<p>对于大本营，下面是各杯段奖励，按照楼主本人情况可以看出对于银I和金III，其实区别并不大。补充一句，根据 TH 级别和部队等级，战术性的维持在一定杯段也是挺重要的技巧。高杯段会遇到太强对手，太低又则对手太多，能够掠夺的资源会非常有限。</p>
+<p><img src="images/image-3__杯段联赛奖励.png" alt="杯段联赛奖励"></p>
+<p>又比如“在联机模式中摧毁 12 个圣水瓶”，这种任务性价比也比较高，由于联机模式不是随机匹配，楼主一般会搜索那些圣水瓶外置的基地，根据对方防御的强度和资源的多少决定只攻击目标建筑还是攻击全部。</p>
+<p><strong>对战型：</strong></p>
+<p>攻击比自己高的村庄也是性价比很高的任务，一般累积 3 星可以获得 200 积分。可以通过搜索对手选择那些能攻破的（耐心点，多搜几次一定会有），另外，攻击之前别忘了找高级别的部落成员捐和你目前部队配合的兵种。</p>
+<p>下图是不同级别大本营外观，注意进攻时需要认清楚，尤其 TH5 和 TH6 相似程度很高。</p>
+<p><img src="images/image-4__不同级别大本营.png" alt="不同级别大本营"></p>
+<p>还需要注意区分有些任务要求一场比赛获得 3 星，另一些则是累积获得 3/6 星。</p>
+<p>不太推荐类似于对抗赛中总计达到 225% 的摧毁率的任务。理由：根据对抗赛规则，只要破坏率比对方高便可赢得比赛（先比星数，再比破坏百分比）。楼主根据这个要求，一般是保证 50% 破坏率 + 破坏大本营来获得两星胜利。可以看出，根据这个策略升级的兵种，需要很长时间才能打到 225% 破坏率。</p>
+<p><strong>资源掠夺型：</strong></p>
+<p>这类任务打起来一般也很耗时间，因为资源的存储放分布在多个地方，比如圣水，放在收集器 + 圣水瓶 + 大本营，掠夺资源意味着要摧毁这些所有建筑，时间成本很高。</p>
+<p>上面是对任务的分类以及评论，主要目的是让大家认识到任务有不同分类，所以从任务中心的 12 个任务中挑选时，不应该只凭感觉，而应先判断出他们属于哪一类，并且根据自身情况来选取。最后还想强调几点其他建议和体会：</p>
+<ol>
+<li>
+<p>手游和 PC 游戏的区别除去屏幕和操控外，前者设计初衷是占据玩家的碎片时间，所以会更加强调上线次数而不是在线时长。比如造满一次兵往往需要几分钟，其实，这几分钟时间内玩家不必在线。而游戏也是利用这个时间差，巧妙的设计了宝石系统去让氪金玩家有发挥的空间。在部落竞赛中也要意识到这一点：不用一直在线，只要选好任务，利用碎片时间或者做事的间隙就可以一部分一部分的完成。</p>
+</li>
+<li>
+<p>对于时间限制为一小时的任务一定要为后面突发情况留下够足够时间（应该设定50分钟完成的目标），这种任务往往积分奖励较多，有几次楼主利用坐车的碎片时间，结果由于各种原因超时了一分钟，导致任务作废，挺可惜。</p>
+</li>
+<li>
+<p>放弃正在执行的任务往往都是明智之选。有些任务领取后，辛苦打了几场，可能完成 40%，但是发现实在太耗时间，那么就应该果断放弃，退出等待几十分钟的冷冻时间（本质上和造兵的等待时间有区别吗？）后再登陆继续领取新任务。</p>
+</li>
+<li>
+<p>掉杯不是什么大不了的事情，掉杯不是什么大不了的事情，掉杯不是什么大不了的事情。这一行没有打错，只是重要的事情要说三遍。刚开始玩游戏时，我们在乎的往往太多，所以就画地为牢，给自己太多限制，当慢慢认识到游戏中各种设定的相互作用后，会更明智的做出决策和享受游戏。总结起来是一句话：玩游戏时眼界应该更开阔一些（这和做人不也一样吗？）。</p>
+</li>
+<li>
+<p>上面的分析都是基于专门打部落竞赛的技巧，事实情况是不少任务可以在每天正常游戏的基础上顺便完成，只要随时关注下任务中心即可。</p>
+</li>
+<li>
+<p>这些技巧都时楼主基于 TH7 总结出来的，对更高级的 TH 可能不完全使用。</p>
+</li>
+</ol>
+<p>最后，也是最重要的，希望您能尽情享受游戏：），而不是将部落竞赛作为一项任务来完成。</p>
+<p>读到这里的玩家都是也可以考虑加入我们部落，来的话报 Tao 的名字即可。</p>
+<p><img src="images/image-5__部落名称wolves-s.png" alt="部落名称wolves-s"></p>
+
+</body>
+</html>
