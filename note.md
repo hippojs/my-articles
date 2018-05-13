@@ -8,3 +8,4 @@
 - [ ] Finish the graph query task.
 - [ ] First time clear up the README.md.
 - [ ] Study the case of Twitter, try to post article there.
+- [ ] 游戏中的管理学

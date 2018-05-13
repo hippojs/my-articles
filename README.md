@@ -10,7 +10,7 @@ A collection of current writting / past articles.
 
 ## How to use it
 
-1. Use kebab-case for file names and directory names. e.g. my-folder, my-awesome-new-article. The punchcials has to be English words.
+1. Valide name only includes letter, number and `[]-`. Use kebab-case for file names and directory names. e.g. my-folder, my-awesome-new-article. The punchcials has to be English words.
 2. `<>` stand for a variable, use camelcase for variable name. e.g. `<nameOfImage>`
 3. Create a new folder for each new article,
 4. Article name should begin with 2 `[YY-MM-DD][classify]`
