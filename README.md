@@ -31,6 +31,7 @@ A collection of current writting / past articles.
     - Use VS plugin convert to `.html`
     - USe the following command to extra text _[TODO: write npm script for it]_ `cat example/test.html | node_modules/.bin/html-to-text > test.txt`
 10. Convert to traditional chinese by copy the article into `scripts/chinese-conv.js` _[TODO: fort the lib and create a cli tool for it]_ https://github.com/Pleasurazy/chinese-conv
+11. Cite use ` -- [Source article name](URL)`
 
 ## Serve image files from github
 
